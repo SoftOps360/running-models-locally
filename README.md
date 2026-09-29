@@ -9,7 +9,7 @@ You can't paste prod logs, secrets, or customer data into a public API — compl
 2. Pull a model:
    ```bash
    ollama pull llama3.2:1b        # ~1.3 GB — fast on a CPU-only laptop (the scripts' default)
-   # stronger machine (more RAM / a GPU)? →  ollama pull llama3.1   (8B, smarter but slower on CPU)
+   # lighter machine (CPU-only laptop)? →  ollama pull llama3.2:1b   (~1.3 GB, faster)
    ```
 3. Ollama now serves an **OpenAI-compatible API** at `http://localhost:11434` — that's the whole trick.
 

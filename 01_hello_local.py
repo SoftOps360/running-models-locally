@@ -10,7 +10,7 @@ from openai import OpenAI
 
 # Point the SAME OpenAI SDK at your local Ollama. api_key is required but ignored.
 client = OpenAI(base_url="http://localhost:11434/v1", api_key="ollama")
-MODEL = "llama3.2:1b"       # fast on a CPU-only laptop. Stronger machine? "llama3.1" (8B) is smarter.
+MODEL = "llama3.1"          # good default (8B). Lighter machine (CPU-only laptop)? use "llama3.2:1b".
 
 resp = client.chat.completions.create(
     model=MODEL,

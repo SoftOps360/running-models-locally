@@ -4,7 +4,7 @@ import json
 from openai import OpenAI
 
 client = OpenAI(base_url="http://localhost:11434/v1", api_key="ollama")
-MODEL = "llama3.2:1b"       # fast on a CPU-only laptop. Stronger machine? "llama3.1" (8B) is smarter.
+MODEL = "llama3.1"          # good default (8B). Lighter machine (CPU-only laptop)? use "llama3.2:1b".
 
 # A log line you must NEVER paste into a public API — it carries a live token + internal IP.
 log = ("2024/05/01 db-01 ERROR auth failed for user=svc_payments "

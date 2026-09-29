@@ -10,7 +10,7 @@ USE_LOCAL = True          # ← flip this to False to use the cloud instead
 
 if USE_LOCAL:
     client = OpenAI(base_url="http://localhost:11434/v1", api_key="ollama")
-    MODEL, where = "llama3.2:1b", "LOCAL (Ollama)"   # fast on CPU; "llama3.1" (8B) if you have the RAM/GPU
+    MODEL, where = "llama3.1", "LOCAL (Ollama)"   # good default (8B); "llama3.2:1b" on a lighter CPU-only box
 else:
     client = OpenAI(base_url="https://api.groq.com/openai/v1", api_key=os.environ["GROQ_API_KEY"])
     MODEL, where = "openai/gpt-oss-120b", "CLOUD (Groq)"
